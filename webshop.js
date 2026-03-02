@@ -1,6 +1,3 @@
-const url = "https://fakestoreapi.com/products/";
-
-
 
 async function fetchData(selectedCategory = "all") {
     let finalUrl = "";
@@ -24,7 +21,7 @@ async function fetchData(selectedCategory = "all") {
     try {
         const response = await fetch(finalUrl);
         if (!response.ok) {
-            throw new Error(`Could not fetch API: ${url}`);
+            throw new Error(`Could not fetch API: ${finalUrl}`);
         };
         const data = await response.json();
         const categoriesSet = new Set();
