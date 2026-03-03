@@ -60,7 +60,7 @@ async function fetchData(selectedCategory = "all") {
             //description
             const desc = document.createElement("div");
             desc.classList.add("card-text", "small", "text-muted", "mb-auto");
-            desc.innerText = i.description.substring(0, 100) + "...";
+            desc.innerText = i.description.substring(0, 100);
 
             //price
             const price = document.createElement("p");
